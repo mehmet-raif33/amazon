@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li{
+    margin-bottom: 7px;
+    transition: 200ms;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 60px;
+    padding-left: 60px;
+    border-radius: 5px;
+}
+
+li:hover{
+    background-color: yellow;
+}
+
+@media screen and (max-widht: 1000px) {
+    #homepagegrid{
+        grid-column: 4;
+        grid-row: 2;
+    } 
+}
