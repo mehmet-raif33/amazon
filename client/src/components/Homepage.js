@@ -10,11 +10,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Checkbox from '@mui/material/Checkbox';
 
 function Homepage() {
 
   return (
-    <div className='bg-slate-100 h-[1000px]'>
+    <div className='bg-slate-300'>
         <Swiper
         modules={[Navigation,EffectFade,Autoplay]}
         spaceBetween={0}
@@ -36,43 +37,146 @@ function Homepage() {
             </SwiperSlide>
         </Swiper>
 
-        <div className='h-10 bg-slate-200 flex justify-center pt-1 border-y-2 border-green-400'>
+        <div className='h-10 bg-slate-200 flex justify-center pt-1 border-y-2 border-green-400 mb-3'>
             <h2 className='text-lg text-center'>
                 ALL THOSE PRODUCT IS FOR YOU!!
             </h2>
         </div>
 
-        <Grid container>
-            <Grid container rowspacing={2} item xs={3}>
-            <Accordion>
-                <AccordionSummary
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                expandIcon={<KeyboardArrowDownIcon />}
-                >
-                <Typography>Accordion 1</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <h2>
-                        Kadın
-                    </h2>
-                </AccordionDetails>
-            </Accordion>
-            <Accordion>
-                <AccordionSummary
-                aria-controls="panel2a-content"
-                id="panel2a-header"
-                >
-                <Typography>Accordion 2</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <h2>
-                        Kadın
-                    </h2>
-                </AccordionDetails>
-            </Accordion>
+        <Grid container spacing={2}>
+            <Grid container item xs={2} direction="column">
+                <Typography align='center' sx={{paddingBottom: 1,backgroundColor:'lightgreen',paddingTop:1, marginBottom:1}}>
+                    Categorys
+                </Typography>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    expandIcon={<KeyboardArrowDownIcon />}
+                    >
+                    <Typography>Sex</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            Erkek <Checkbox />
+                        </Typography>
+                        <Typography>
+                            Kadın <Checkbox />
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                    expandIcon={<KeyboardArrowDownIcon />}
+                    >
+                    <Typography>People Choose</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            Most Purchased <Checkbox />
+                        </Typography>
+                    </AccordionDetails>
+                    <AccordionDetails>
+                        <Typography>
+                            Never Received <Checkbox />
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    expandIcon={<KeyboardArrowDownIcon />}
+                    >
+                    <Typography>Brand</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            Nike <Checkbox />
+                        </Typography>
+                        <Typography>
+                            Adidas <Checkbox />
+                        </Typography>
+                        <Typography>
+                            Gucci <Checkbox />
+                        </Typography>
+                        <Typography>
+                            Chanel <Checkbox />
+                        </Typography>
+                        <Typography>
+                            Prada <Checkbox />
+                        </Typography>
+                        <Typography>
+                            Dior <Checkbox />
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    expandIcon={<KeyboardArrowDownIcon />}
+                    >
+                    <Typography>Body</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            XXS <Checkbox />
+                        </Typography>
+                        <Typography>
+                            XS <Checkbox />
+                        </Typography>
+                        <Typography>
+                            S <Checkbox />
+                        </Typography>
+                        <Typography justifyContent='center'>
+                            M <Checkbox />
+                        </Typography>
+                        <Typography>
+                            L <Checkbox />
+                        </Typography>
+                        <Typography>
+                            XL <Checkbox />
+                        </Typography>
+                        <Typography>
+                            2XL <Checkbox />
+                        </Typography>
+                        <Typography>
+                            3XL <Checkbox />
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                    <AccordionSummary
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                    expandIcon={<KeyboardArrowDownIcon />}
+                    >
+                    <Typography>Stars</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <Typography>
+                            5<Checkbox />
+                        </Typography>
+                        <Typography>
+                            4+<Checkbox />
+                        </Typography>
+                        <Typography>
+                            3+<Checkbox />
+                        </Typography>
+                        <Typography>
+                            2+<Checkbox />
+                        </Typography>
+                        <Typography>
+                            1+<Checkbox />
+                        </Typography>
+                        
+                    </AccordionDetails>
+                </Accordion>
             </Grid>
-            <Grid container spacing={2} item xs={9}>
+            <Grid container spacing={1} item xs={10} >
                 <Grid item xs={2}>
                     <img className='rounded-lg' src='https://m.media-amazon.com/images/I/71D9ImsvEtL._UY500_.jpg' alt='jsdhakj' / >
                     <h3 className='mt-2 text-lg mb-0'>Nike Pro - Original</h3>
@@ -105,8 +209,6 @@ function Homepage() {
                 </Grid> 
             </Grid>
         </Grid>
-
-        
     </div>
   )
 }
