@@ -5,6 +5,7 @@ import Ayarlar from './components/Ayarlar';
 import Sepet from './components/Sepet';
 import Iletisim from './components/Iletisim';
 import Footer from './components/Footer';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Homepage />} />
+        <Route path='/product-details' element={<ProductDetails />} />
         <Route path='/ayarlar' element={<Ayarlar />} />
         <Route path='/iletisim' element={<Iletisim />} />
         <Route path='/sepet' element={<Sepet />} />
